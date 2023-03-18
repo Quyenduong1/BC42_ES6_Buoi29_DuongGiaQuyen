@@ -56,14 +56,14 @@
 				<!-- Modal body -->
 				<div class="modal-body">
 					<form role="form">
-                        <!-- TAI KHOAN  -->
+                        <!-- MA  -->
 						<div class="form-group">
 							<div class="input-group">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa fa-user"></i></span>
 								</div>
 								<input type="text" name="tk" id="tknv" class="form-control input-sm"
-									placeholder="Tài khoản">
+									placeholder="Mã">
 							</div>
 
 							<span class="sp-thongbao" id="tbTKNV"></span>
@@ -94,42 +94,18 @@
 							<span class="sp-thongbao" id="tbEmail"></span>
 						</div>
                         
-                        <!-- PASSWORD  -->
+                        <!-- ADDRESS  -->
 						<div class="form-group">
 							<div class="input-group">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa fa-key"></i></span>
 								</div>
 								<input type="password" name="password" id="password" class="form-control input-sm"
-									placeholder="Mật khẩu">
+									placeholder="Địa chỉ">
 							</div>
 							<span class="sp-thongbao" id="tbMatKhau"></span>
 						</div>
 
-                        <!-- DATEPICKER  -->
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa fa-calendar"></i></span>
-								</div>
-								<input type="text" name="ngaylam" id="datepicker" class="form-control"
-									placeholder="Ngày làm">
-							</div>
-
-							<span class="sp-thongbao" id="tbNgay"></span>
-						</div>
-						
-                        <!-- LUONGCB  -->
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa-solid fa-money-bill" aria-hidden="true"></i></span>
-								</div>
-								<input type="text" name="luongCB" id="luongCB" class="form-control input-sm"
-									placeholder="Lương cơ bản">
-							</div>
-							<span class="sp-thongbao" id="tbLuongCB"></span>
-						</div>
 
                         <!-- CAREER  -->
 						<div class="form-group">
@@ -139,26 +115,26 @@
 								</div>
 								<select class="form-control" id="chucvu">
 									<option>Chọn chức vụ</option>
-									<option>Giám Đốc</option>
-									<option>Trưởng phòng</option>
-									<option>Nhân viên</option>
+									<option>Student</option>
+									<option>Employee</option>
+									<option>Customer</option>
 								</select>
 							</div>
 
 							<span class="sp-thongbao" id="tbChucVu"></span>
 						</div>
 
-                        <!-- GIOLAM -->
-						<div class="form-group">
+                        <!-- Diem toan -->
+						<!-- <div class="form-group">
 							<div class="input-group">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa-solid fa-clock"></i></span>
 								</div>
-								<input type="text" name="gioLam" id="gioLam" class="form-control input-sm"
-									placeholder="Giờ làm">
+								<input type="number" name="toan" id="toan" class="form-control input-sm"
+									placeholder="Điểm toán">
 							</div>
-							<span class="sp-thongbao" id="tbGiolam"></span>
-						</div>
+							<span class="sp-thongbao" id="tbDiemToan"></span>
+						</div> -->
 
 					</form>
 				</div>
@@ -184,16 +160,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 
-
-    
-
-
-
-
-    
-
-    
-
+    <script src="./index.js"></script>
     
 </body>
 </html>
