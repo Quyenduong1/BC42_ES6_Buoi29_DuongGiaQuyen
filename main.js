@@ -1,6 +1,6 @@
-const studentArray = [];
+let studentArray = [];
 
-// Hàm thêm 
+//1. Hàm thêm 
 // B1: 
 function createStudent() {
    let id = document.getElementById("code").value;
@@ -22,7 +22,7 @@ function createStudent() {
     renderTableStudent(studentArray);    
 }
 
-// hàm tìm kiếm 
+//3. hàm tìm kiếm 
 function searchStudent() {
     // B1: Dom
     let search = document.getElementById('search').value;
@@ -40,7 +40,34 @@ function searchStudent() {
 
 }
 
-// hàm hiển thị 
+//4. hàm xóa 
+function DeleteStudent(studentId) {
+    studentArray = studentArray.filter((student) => {
+        return student.id !== studentId;
+    })
+
+    renderTableStudent(studentArray);
+}
+
+//5. fill update 
+function selectStudent(studentId) {
+    let selectedStudent = studentArray.find((student) => {
+        return student.id === studentId;
+    })
+
+
+    document.getElementById("code").value = selectedStudent.id;
+    document.getElementById("name").value = selectedStudent.name;
+    document.getElementById("email").value = selectedStudent.email;
+    document.getElementById("address").value = selectedStudent.address;
+    document.getElementById("chucvu").value = selectedStudent.type;
+    document.getElementById("toan").value = selectedStudent.toan;
+    document.getElementById("ly").value = selectedStudent.ly;
+    document.getElementById("hoa").value = selectedStudent.hoa;
+
+}
+
+//2. hàm hiển thị 
 function renderTableStudent(studentArray) {
     let html = studentArray.reduce((output,student) => {
         return output + `
@@ -55,8 +82,8 @@ function renderTableStudent(studentArray) {
             <td>${student.hoa}</td>
             <td>${Math.floor(student.CalcSubject())}</td>
             <td>
-            <button class="btn btn-primary">Chỉnh sửa</button>
-            <button class="btn btn-danger">Xóa</button>
+            <button class="btn btn-primary" onclick="selectStudent()">Chỉnh sửa</button>
+            <button class="btn btn-danger" onclick="DeleteStudent('${student.id}')">Xóa</button>
             </td>           
         </tr>
         `;
@@ -65,3 +92,19 @@ function renderTableStudent(studentArray) {
     document.getElementById("tbodyThongTinStudent").innerHTML = html;
 }
 
+// hàm reset form
+function resetForm() {
+    document.getElementById("code").value = "";
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("address").value = "";
+    document.getElementById("chucvu").value = "";
+    document.getElementById("toan").value = "";
+    document.getElementById("ly").value = "";
+    document.getElementById("hoa").value = "";
+}
+
+// hàm reset giao diện 
+function resetTable() {
+    document.getElementById("tbodyThongTinStudent") = "";
+}
