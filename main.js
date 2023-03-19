@@ -49,7 +49,7 @@ function DeleteStudent(studentId) {
     renderTableStudent(studentArray);
 }
 
-//5. fill update 
+//5. fill len form 
 function selectStudent(studentId) {
     let selectedStudent = studentArray.find((student) => {
         return student.id === studentId;
@@ -64,6 +64,30 @@ function selectStudent(studentId) {
     document.getElementById("toan").value = selectedStudent.toan;
     document.getElementById("ly").value = selectedStudent.ly;
     document.getElementById("hoa").value = selectedStudent.hoa;
+
+    $("#myModal").modal("show");
+
+}
+
+// 6. hàm cập nhật 
+function UpdateForm() {
+    let id = document.getElementById("code").value;
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let address = document.getElementById("address").value;
+    let type = document.getElementById("chucvu").value;
+    let toan = +document.getElementById("toan").value;
+    let ly = +document.getElementById("ly").value;
+    let hoa = +document.getElementById("hoa").value;
+
+   const student = new Student(id,name,email,address,type,toan,ly,hoa);
+
+   let index = studentArray.findIndex((student) => {
+    return student.id === id;
+   });
+   studentArray[index] = student;
+
+   renderTableStudent(studentArray);
 
 }
 
@@ -82,7 +106,7 @@ function renderTableStudent(studentArray) {
             <td>${student.hoa}</td>
             <td>${Math.floor(student.CalcSubject())}</td>
             <td>
-            <button class="btn btn-primary" onclick="selectStudent()">Chỉnh sửa</button>
+            <button class="btn btn-primary" onclick="selectStudent('${student.id}')">Chỉnh sửa</button>
             <button class="btn btn-danger" onclick="DeleteStudent('${student.id}')">Xóa</button>
             </td>           
         </tr>
@@ -108,3 +132,5 @@ function resetForm() {
 function resetTable() {
     document.getElementById("tbodyThongTinStudent") = "";
 }
+
+
