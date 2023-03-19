@@ -113,28 +113,27 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa fa-briefcase"></i></span>
 								</div>
-								<select class="form-control" id="chucvu">
+								<select class="form-control" id="chucvu" onchange="myFuntion()">
 									<option>Chọn chức vụ</option>
-									<option>Student</option>
-									<option>Employee</option>
-									<option>Customer</option>
+									<option value="Student">Student</option>
+									<option value="Employee">Employee</option>
+									<option value="Customer">Customer</option>
 								</select>
 							</div>
 
 							<span class="sp-thongbao" id="tbChucVu"></span>
 						</div>
 
-                        <!-- Diem toan -->
-						<!-- <div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fa-solid fa-clock"></i></span>
-								</div>
-								<input type="number" name="toan" id="toan" class="form-control input-sm"
-									placeholder="Điểm toán">
-							</div>
-							<span class="sp-thongbao" id="tbDiemToan"></span>
-						</div> -->
+                        <div id="space">
+                            <!-- Subject Student -->
+                            <div id="student-subject"></div>
+
+                            <!-- Employee  -->
+                            <div id="employee"></div>
+
+                            <!-- Customer  -->
+                            <div id="customer"></div>
+                        </div>
 
 					</form>
 				</div>
