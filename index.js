@@ -77,8 +77,6 @@ function Type() {
     }
 }
 
-
-
 function myFuntion() {
     let chose = document.getElementById("chucvu").value;
     if(chose === "Student"){
@@ -88,7 +86,7 @@ function myFuntion() {
                 <div class="input-group-prepend">
 					<span class="input-group-text"><i class="fa-solid fa-clock"></i></span>
 				</div>
-				<input type="number" name="toan" id="subject" class="form-control input-sm "
+				<input  type="number" name="toan" id="toan" class="form-control input-sm "
 				placeholder="Điểm toán">
                                     
 			</div>
@@ -100,7 +98,7 @@ function myFuntion() {
 				<div class="input-group-prepend">
 					<span class="input-group-text"><i class="fa-solid fa-clock"></i></span>
 				</div>
-				<input type="number" name="ly"  class="form-control input-sm "
+				<input type="number" name="ly" id="ly" class="form-control input-sm "
 				placeholder="Điểm Lý">
 			</div>
 				<span class="sp-thongbao" id="tbDiemLy"></span>
@@ -111,7 +109,7 @@ function myFuntion() {
 				<div class="input-group-prepend">
 					<span class="input-group-text"><i class="fa-solid fa-clock"></i></span>
 				</div>
-				<input type="number" name="hoa"   class="form-control input-sm "
+				<input type="number" name="hoa" id="hoa"  class="form-control input-sm "
 				placeholder="Điểm Hóa">
 			</div>
 			<span class="sp-thongbao" id="tbDiemHoa"></span>
