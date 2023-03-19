@@ -1,5 +1,6 @@
 const studentArray = [];
 
+// Hàm thêm 
 // B1: 
 function createStudent() {
    let id = document.getElementById("code").value;
@@ -21,6 +22,25 @@ function createStudent() {
     renderTableStudent(studentArray);    
 }
 
+// hàm tìm kiếm 
+function searchStudent() {
+    // B1: Dom
+    let search = document.getElementById('search').value;
+
+    // B2: lọc 
+    let newStudentArray = studentArray.filter((student) => {
+        let name = student.name.toLowerCase();
+        search = search.toLowerCase();
+
+        return name.indexOf(search) !== -1;
+    });
+
+    // B3:
+    renderTableStudent(newStudentArray);
+
+}
+
+// hàm hiển thị 
 function renderTableStudent(studentArray) {
     let html = studentArray.reduce((output,student) => {
         return output + `
@@ -34,6 +54,10 @@ function renderTableStudent(studentArray) {
             <td>${student.ly}</td>
             <td>${student.hoa}</td>
             <td>${Math.floor(student.CalcSubject())}</td>
+            <td>
+            <button class="btn btn-primary">Chỉnh sửa</button>
+            <button class="btn btn-danger">Xóa</button>
+            </td>           
         </tr>
         `;
     },"")

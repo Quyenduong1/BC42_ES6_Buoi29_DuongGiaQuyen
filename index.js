@@ -15,6 +15,7 @@ function Type() {
                 <th>Lý</th>
                 <th>Hóa</th>
                 <th>Điểm Trung Bình</th>
+                <th><em class="fa fa-cog"></em></th>
             </tr>
             </thead>
             <tbody id="tbodyThongTinStudent"></tbody>
@@ -38,6 +39,7 @@ function Type() {
                 <th>Số Ngày Làm Việc</th>
                 <th>Lương Theo Ngày</th>
                 <th>Lương</th>
+                <th><em class="fa fa-cog"></em></th>
             </tr>
             </thead>
             <tbody id="tbodyThongTinEmployee"></tbody>
@@ -61,6 +63,7 @@ function Type() {
                 <th>Tên Công Ty</th>
                 <th>Trị Giá Hóa Đơn</th>
                 <th>Đánh Giá</th>
+                <th><em class="fa fa-cog"></em></th>
             </tr>
             </thead>
             <tbody id="tbodyThongTinCustomer"></tbody>
