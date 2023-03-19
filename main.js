@@ -7,9 +7,9 @@ function createStudent() {
    let email = document.getElementById("email").value;
    let address = document.getElementById("address").value;
    let type = document.getElementById("chucvu").value;
-   let toan = document.getElementById("toan").value;
-   let ly = document.getElementById("ly").value;
-   let hoa = document.getElementById("hoa").value;
+   let toan = +document.getElementById("toan").value;
+   let ly = +document.getElementById("ly").value;
+   let hoa = +document.getElementById("hoa").value;
 
 //    B2:
    const student = new Student(id,name,email,address,type,toan,ly,hoa);
@@ -18,7 +18,7 @@ function createStudent() {
     studentArray.push(student);
 
     // B4: render
-    renderTableStudent(studentArray);
+    renderTableStudent(studentArray);    
 }
 
 function renderTableStudent(studentArray) {
@@ -33,7 +33,7 @@ function renderTableStudent(studentArray) {
             <td>${student.toan}</td>
             <td>${student.ly}</td>
             <td>${student.hoa}</td>
-            <td>${student.CalcSubject()}</td>
+            <td>${Math.floor(student.CalcSubject())}</td>
         </tr>
         `;
     },"")

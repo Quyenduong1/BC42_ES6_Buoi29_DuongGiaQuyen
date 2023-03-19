@@ -5,7 +5,7 @@ class Person {
         this.email = email;
         this.address = address;
     }
-    
+
 }
 
 
@@ -17,9 +17,9 @@ class Student extends Person {
         this.ly = ly;
         this.hoa = hoa;
     }
-
+    
     CalcSubject() {
-        return (this.toan + this.ly + this.hoa)/3;
+        return (this.toan + this.ly + this.hoa) / 3;
     }
 }
 
