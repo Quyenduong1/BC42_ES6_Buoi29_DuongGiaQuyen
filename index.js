@@ -1,3 +1,84 @@
+function Type() {
+    let chose = document.getElementById('typeSelect').value;
+    if(chose === 'Student') {
+    const Student = `
+    <div class="col-8 mx-auto">
+        <table class="table">
+            <thead>
+            <tr id="th-head">
+                <th>Mã</th>
+                <th>Họ Và Tên</th>
+                <th>Email</th>
+                <th>Địa chỉ</th>
+                <th>Type</th>
+                <th>Toán</th>
+                <th>Lý</th>
+                <th>Hóa</th>
+                <th>Điểm Trung Bình</th>
+            </tr>
+            </thead>
+            <tbody id="tbodyThongTinStudent"></tbody>
+        </table>
+    </div>
+    `;
+    document.getElementById("tEmployee").innerHTML = "";
+    document.getElementById("tCustomer").innerHTML = "";
+    document.getElementById("tStudent").innerHTML = Student;
+    } else if (chose === "Employee") {
+        const employee = `
+        <div class="col-8 mx-auto">
+        <table class="table">
+            <thead>
+            <tr id="th-head">
+                <th>Mã</th>
+                <th>Họ Và Tên</th>
+                <th>Email</th>
+                <th>Địa chỉ</th>
+                <th>Type</th>
+                <th>Số Ngày Làm Việc</th>
+                <th>Lương Theo Ngày</th>
+                <th>Lương</th>
+            </tr>
+            </thead>
+            <tbody id="tbodyThongTinEmployee"></tbody>
+        </table>
+    </div>
+    `;
+    document.getElementById("tCustomer").innerHTML = "";
+    document.getElementById("tStudent").innerHTML = "";
+    document.getElementById("tEmployee").innerHTML = employee;
+    } else if (chose === "Customer") {
+        const customer = `
+        <div class="col-9 mx-auto">
+        <table class="table">
+            <thead>
+            <tr id="th-head">
+                <th>Mã</th>
+                <th>Họ Và Tên</th>
+                <th>Email</th>
+                <th>Địa chỉ</th>
+                <th>Type</th>
+                <th>Tên Công Ty</th>
+                <th>Trị Giá Hóa Đơn</th>
+                <th>Đánh Giá</th>
+            </tr>
+            </thead>
+            <tbody id="tbodyThongTinCustomer"></tbody>
+        </table>
+    </div>
+    `;
+    document.getElementById("tStudent").innerHTML = "";
+    document.getElementById("tEmployee").innerHTML = "";
+    document.getElementById("tCustomer").innerHTML = customer;
+    } else {
+        document.getElementById("tStudent").innerHTML = "";
+        document.getElementById("tEmployee").innerHTML = "";
+        document.getElementById("tCustomer").innerHTML = "";
+    }
+}
+
+
+
 function myFuntion() {
     let chose = document.getElementById("chucvu").value;
     if(chose === "Student"){

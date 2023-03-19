@@ -27,22 +27,21 @@
                 <button class="btn btn-dark"  id="btnReset">Reset</button>
                 <button class="btn btn-info"  id="btnUpdate">Cập Nhật</button>
             </div>
+
         </div>
 
-        <div class="col-8 mx-auto">
-            <table class="table">
-              <thead>
-                <tr id="th-head">
-                  <th>Mã</th>
-                  <th>Họ Và Tên</th>
-                  <th>Email</th>
-                  <th>Địa chỉ</th>
-                  <th>Type</th>
-                </tr>
-              </thead>
-              <tbody id="tbodyThongTin"></tbody>
-            </table>
-          </div>
+        <div id="select-main" style="text-align: center; width: 43%; padding-bottom: 20px;">
+            <select style="padding:5px 10px 5px 5px; border-radius: 10px;" name="type" id="typeSelect" onchange="Type()">
+                <option value="">Hãy Chọn Chức Vụ</option>
+                <option value="Student">Student</option>
+                <option value="Employee">Employee</option>
+                <option value="Customer">Customer</option>
+            </select>
+        </div>
+
+        <div id="tStudent"></div>
+        <div id="tEmployee"></div>
+        <div id="tCustomer"></div>
     </div>
 
      <!-- The Modal -->
@@ -62,7 +61,7 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa fa-user"></i></span>
 								</div>
-								<input type="text" name="tk" id="tknv" class="form-control input-sm"
+								<input type="text" name="code" id="code" class="form-control input-sm"
 									placeholder="Mã">
 							</div>
 
@@ -100,10 +99,10 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa fa-key"></i></span>
 								</div>
-								<input type="password" name="password" id="password" class="form-control input-sm"
+								<input type="text" name="address" id="address" class="form-control input-sm"
 									placeholder="Địa chỉ">
 							</div>
-							<span class="sp-thongbao" id="tbMatKhau"></span>
+							<span class="sp-thongbao" id="address"></span>
 						</div>
 
 
@@ -159,7 +158,8 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 
+    <script src="./object.js"></script>
     <script src="./index.js"></script>
-    
+
 </body>
 </html>
