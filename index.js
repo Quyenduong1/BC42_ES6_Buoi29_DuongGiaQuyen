@@ -119,9 +119,19 @@ function myFuntion() {
 		</div>
 
         `;
+
+        const buttonStuden = `
+                    <button id="btnThemNV" type="button" onclick="createStudent()" class="btn btn-success">Thêm học sinh</button>
+					<button id="btnCapNhat" type="button" onclick="UpdateForm()" class="btn btn-primary" data-dismiss="modal">Cập Nhật</button>
+					<button id="btnCapNhat" type="button" onclick="resetForm()" class="btn btn-dark">Reset</button>
+					
+        `;
         document.getElementById('employee').innerHTML = "";
         document.getElementById('customer').innerHTML = "";
         document.getElementById('student-subject').innerHTML = subject;
+        document.getElementById('modalfooter-2').innerHTML = "";
+        document.getElementById('modalfooter-3').innerHTML = "";
+        document.getElementById('modalfooter').innerHTML = buttonStuden;
     } else if(chose === 'Employee'){
         const employee = `
         <div class="form-group" >
@@ -129,7 +139,7 @@ function myFuntion() {
 				<div class="input-group-prepend">
 					<span class="input-group-text"><i class="fa-solid fa-clock"></i></span>
 				</div>
-				<input type="number" name="timework"  class="form-control input-sm "
+				<input type="number" name="timework" id="giolam" class="form-control input-sm "
 				placeholder="Số ngày làm việc">
 			</div>
 				<span class="sp-thongbao" id="tbTimeWork"></span>
@@ -140,15 +150,24 @@ function myFuntion() {
 				<div class="input-group-prepend">
 					<span class="input-group-text"><i class="fa-solid fa-clock"></i></span>
 				</div>
-				<input type="number" name="luong"  class="form-control input-sm "
+				<input type="number" name="luong" id="luongDate"  class="form-control input-sm "
 				placeholder="Lương theo ngày">
 			</div>
 				<span class="sp-thongbao" id="tbLuong"></span>
 		</div>
         `;
+        const buttonEmployee = `
+                    <button id="btnThemNV" type="button" onclick="createEmployee()" class="btn btn-success">Thêm Nhân Viên</button>
+					<button id="btnCapNhat" type="button" onclick="UpdateForm()" class="btn btn-primary" data-dismiss="modal">Cập Nhật</button>
+					<button id="btnCapNhat" type="button" onclick="resetForm()" class="btn btn-dark">Reset</button>
+					
+        `;
         document.getElementById('student-subject').innerHTML = "";
         document.getElementById('customer').innerHTML = "";
-        document.getElementById('employee').innerHTML = employee;
+        document.getElementById('employee').innerHTML = employee; 
+        document.getElementById('modalfooter-3').innerHTML = "";
+        document.getElementById('modalfooter').innerHTML = "";
+        document.getElementById('modalfooter-2').innerHTML = buttonEmployee;
     } else if(chose === 'Customer'){
         const customer = `
         <div class="form-group" >
@@ -185,12 +204,27 @@ function myFuntion() {
 		</div>
 
         `;
+
+        const buttonCustomer = `
+                    <button id="btnThemNV" type="button" onclick="createStudent()" class="btn btn-success">Thêm Khách Hàng</button>
+					<button id="btnCapNhat" type="button" onclick="UpdateForm()" class="btn btn-primary" data-dismiss="modal">Cập Nhật</button>
+					<button id="btnCapNhat" type="button" onclick="resetForm()" class="btn btn-dark">Reset</button>
+					
+        `;
         document.getElementById('student-subject').innerHTML = "";
         document.getElementById('employee').innerHTML = "";
         document.getElementById('customer').innerHTML = customer;
+
+        document.getElementById('modalfooter-3').innerHTML = buttonCustomer;
+        document.getElementById('modalfooter').innerHTML = "";
+        document.getElementById('modalfooter-2').innerHTML = "";
     } else {
         document.getElementById('student-subject').innerHTML = "";
         document.getElementById('employee').innerHTML = "";
         document.getElementById('customer').innerHTML = "";
+
+        document.getElementById('modalfooter-3').innerHTML = "";
+        document.getElementById('modalfooter').innerHTML = "";
+        document.getElementById('modalfooter-2').innerHTML = "";
     }
 }

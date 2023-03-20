@@ -24,13 +24,15 @@ class Student extends Person {
 }
 
 class Employee extends Person {
-    constructor(id,name,email,address,Timework,LuongtoDate,Luong){
+    constructor(id,name,email,address,type,Timework,LuongtoDate){
         super(id,name,email,address);
+        this.type = type;
         this.Timework = Timework;
         this.LuongtoDate = LuongtoDate;
-        this.Luong = Luong;
     }
-
+    CalcLuong() {
+        return this.Timework * this.LuongtoDate;
+    }
     
 }
 
